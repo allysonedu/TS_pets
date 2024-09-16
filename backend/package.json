@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch --inspect src/shared/infra/server.ts",
+    "build": "tsup src --out-dir build",
+    "start": "node build/shared/infra/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,12 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@rocketseat/eslint-config": "^2.2.2"
+    "@prisma/client": "5.19.1",
+    "@rocketseat/eslint-config": "^2.2.2",
+    "fastify": "4.28.1",
+    "prisma": "5.19.1",
+    "tsx": "4.19.1",
+    "uuid": "10.0.0",
+    "zod": "3.23.8"
   }
 }
